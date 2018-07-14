@@ -1,70 +1,54 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <style>
-      .container {
-        width: 540px;
-      }
-
-      .splitter {
-        width: 49%;
-        display: inline-block;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="description" content="Сайт Елены Луьяновой">
+    <meta name="keywords" content="Елена, Лукьянова, йога. психотерапия, Новокузнецк">
+    <title>Сайт Елены Луьяновой</title> 
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
   </head>
   <body>
+    <div class="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div> 
+    </div>
     <header>
-        <span>
-          <img src="https://narod.nskes.ru/img/logo-ensbyt.png" />
-        </span>
-        <span>
-          <a href="/register.php">Регистрация</a>
-        </span>
-        <span>
-          <a href="/register.php">Авторизация</a>
-        </span>
-        <span>
-          <p>Есть вопросы? 
-              Позвоните нам или напишите!
-          </p>
-          <p>Многоканальный телефон 
-              контакт-центра: (383) 273-98-98
-          </p>
-          <p>Служба контроля качества
-            обслуживания: 8 800-775-04-05
-          </p>
+        <div class="headerTitle">ЕЛЕНА ЛУКЬЯНОВА</div>
+        <div class="subHeader">ПСИХОТЕРАПЕВТ • ТРЕНЕР ПО ЙОГЕ</div>
+        <span class="headerPhone">
+          <a class="phoneLink" href="tel:+79039463114">+7 903 946 31 14</a>
+          <div>г. Новокузнецк</div>
         </span>
     </header>
-    <div class="container">
-      <span class="splitter">
-        <h1>Регистрация</h1>
-        <p>Зарегистрируйтесь и оплатите электроэнергию, отопление, горячую воду и дополнительные услуги*, не выходя из дома.</p>
-        <a href="/register.php">Зарегистрироваться</a>
-      </span>
-      <span class="splitter">
-        <form method="POST" action="login.php">
-            <h1>Авторизация</h1>
-            <div>
-              <label>
-                Логин
-                <input type="text" />
-              </label>
-            </div>
-            <label>
-              Пароль
-              <input type="password" />
-            </label>
-            <input type="submit" value="Войти" />
-        </form>
-      </span>
+    <div class="intro">
+      <ul class="menu">
+        <li class="menuItem"><a href="#main">Главная</a></li>
+        <li class="menuItem"><a href="#services">Услуги</a></li>
+        <li class="menuItem"><a href="#yoga">Йога</a></li>
+        <li class="menuItem"><a href="#contacts">Контакты</a></li>
+      </ul>
+      <div class="introBack"></div>
+      <div class="introContent">
+        <span class="introWelcome">
+          <h3>Добро пожаловать!</h3>
+          Меня зовут Елена. <br> Я врач-психотерапевт. <br>
+          Самое важное в моей работе - это самовыражение через помощь людям, творчество и общение
+        </span>
+        <span class="introFace"></span>
+      </div>
     </div>
-    <hr>
-    <p>ОАО «Новосибирскэнергосбыт» постоянно совершенствует интернет-приложение «Сервис-Население», стремясь предоставить клиентам еще больший спектр услуг и сделать процесс пользования ими максимально удобным.</p>
-    * Интернет-приложение «Сервис-население» позволяет воспользоваться следующими услугами:
-    <ul>
-      <li>вызов техника для выдачи справки об отсутствии задолженности;</li>
-      <li>предварительный заказ на установку электросчетчика.</li>
-    </ul>
-    Обратите внимание, что Вы можете оплатить услуги при помощи банковских карт Visa, Maestro, MasterCard и МИР
-    <footer>© ОАО «Новосибирскэнергосбыт» 2007-2018</footer>
+    <script>
+      window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.body.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+      };
+    </script>
   </body>
 </html>
